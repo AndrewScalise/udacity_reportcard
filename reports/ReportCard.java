@@ -61,16 +61,6 @@ public class ReportCard {
 		}
 	}
 	
-	//Method to return the results in string format
-	public void displayReport(){
-		ReportCard report = new ReportCard(this.students, this.scores);
-		report.setLetterGrades(this.scores);
-		ArrayList<Character> letterGrades = report.getLetterGrades();
-		for(int i =0; i < students.size(); i++){
-			System.out.println("Student Name: " +this.students.get(i) +" Score: "+this.scores.get(i) + " Grade: "+ letterGrades.get(i)+ "\n");
-		}
-	}
-	
 	//TO STRING METHOD
 	public String toString(){
 		ReportCard report = new ReportCard(this.students, this.scores);
