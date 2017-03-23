@@ -71,6 +71,22 @@ public class ReportCard {
 		}
 	}
 	
+	//TO STRING METHOD
+	public String toString(){
+		ReportCard report = new ReportCard(this.students, this.scores);
+		report.setLetterGrades(this.scores);
+		ArrayList<Character> letterGrades = report.getLetterGrades();
+		
+		String reported = "";
+		
+		for(int i =0; i < students.size(); i++){
+			reported+=("Student Name: " +this.students.get(i) +" Score: "+this.scores.get(i) + " Grade: "+ letterGrades.get(i)+ "\n");
+		}
+		
+		return reported;
+		
+	}
+	
 	//Example to show the program working
 	public static void main(String[] args){
 		
@@ -90,7 +106,7 @@ public class ReportCard {
 		
 		
 		ReportCard reports = new ReportCard(students, scores);
-		reports.displayReport();
+		System.out.println(reports.toString());
 	}
 
 }
